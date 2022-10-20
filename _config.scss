@@ -9,6 +9,12 @@ $font-family: 'Lato', sans-serif;
 $body-cody: #333;
 $nav-background: #047aed;
 $font-white: #fff;
+$secondary-color: #1c3fa8;
+$dark-color: #002240;
+$light-color-gray: #f4f4f4;
+$success-color: #5cb85c;
+$error-color: #d9534f;
+
 
 
 @mixin flex($justify) {
@@ -24,4 +30,52 @@ $font-white: #fff;
     padding: 0 50px;
 }
 
+@mixin grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
 
+$margin: (
+    my1: 1rem 0,
+    my2: 1.5rem 0,
+    my3: 2rem 0,
+    my4: 3rem 0,
+    my5: 4rem 0,
+);
+
+@mixin card {
+    background-color: $font-white;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    padding: 20px;
+    margin: 10px;
+    color: $body-cody;
+}
+
+/**-------Animations---------**/
+
+@keyframes slideInFromRight {
+    0% { transform: translateX(100);}
+    100% { transform: translateX(0);}
+  }
+@keyframes slideInFromleft {
+    0% { transform: translateX(-100);}
+    100% { transform: translateX(0);}
+  }
+@keyframes slideInFromTop {
+    0% { transform: translateY(-100);}
+    100% { transform: translateY(0);}
+  }
+@keyframes slideInFromBottom {
+    0% { transform: translateY(100);}
+    100% { transform: translateY(0);}
+  }
+
+  @keyframes slidein {
+    0% {  transform: translateX(100);}
+    100% { transform: translateX(0);}
+  }
